@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/slick-1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="./assets/slick-1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Caprice - Homepage</title>
+</head>
+
+<body class="homepage">
+    <header class="header">
+        <div class="header__top">
+            <a href="#" class="btn-light">+7(800)123-45-56</a>
+            <a href="/" class="header__logo"></a>
+            <div class="header__top__icons">
+                <div class="icon search" title="Поиск">
+                    <form class="search__panel">
+                        <input type="text" id="title-search-input" />
+                        <input type="submit" value="Поиск" class="btn btn-dark" />
+                    </form>
+                </div>
+                <span class="icon auth" title="Вход"></span>
+                <span class="icon wish" title="Избранные"></span>
+            </div>
+        </div>
+        <nav class="header__menu">
+            <div class="header__menu__mobile">
+                <span>Меню</span>
+                <div class="mobile_panel">
+                    <span class="mobile_panel--close">X</span>
+                    <ul>
+                        <li><a href="#">главная</a></li>
+                        <li><a href="#">о&nbsp;компании</a></li>
+                        <li><a href="#">каталог</a></li>
+                        <li><a href="#">контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+            <ul>
+                <li><a href="#">главная</a></li>
+                <li><a href="#">о&nbsp;компании</a></li>
+                <li><a href="#">каталог</a></li>
+                <li><a href="#">контакты</a></li>
+            </ul>
+        </nav>
+        <div class="header__hero">
+            <h1>Добро пожаловать в&nbsp;магазин</h1>
+            <p>
+                Caprice&nbsp;&mdash; это интернет-магазин, где представлен полный спектр профессиональной косметики ведущих мировых производителей&nbsp;&mdash; от&nbsp;косметических средств до&nbsp;техники и&nbsp;сопутствующих.
+            </p>
+        </div>
+    </header>
+
+    <main>
+        <section class="section__advantages">
+            <h2>Наши преимущества</h2>
+
+            <div class="advantages_cases">
+                <div class="cases__item">
+                    <div class="cases__item--icon" style="background: url(./assets/images/big-assortment.png) no-repeat center center;"></div>
+                    <p class="cases__item--title">Большой ассортимент.</p>
+                    <p class="cases__item--desc">Более 1000 товаров</p>
+                </div>
+                <div class="cases__item">
+                    <div class="cases__item--icon" style="background: url(./assets/images/prices.png) no-repeat center center;"></div>
+                    <p class="cases__item--title">Цены ниже,</p>
+                    <p class="cases__item--desc">чем у&nbsp;конкурентов на&nbsp;20%</p>
+                </div>
+                <div class="cases__item">
+                    <div class="cases__item--icon" style="background: url(./assets/images/free-delivery.png) no-repeat center center;"></div>
+                    <p class="cases__item--title">Бесплатная доставка</p>
+                    <p class="cases__item--desc">по&nbsp;Москве от&nbsp;1000₽</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories">
+            <h2>каталог товаров</h2>
+
+            <div class="categories-wrapper">
+                <a href="#" class="categories__item">
+                    <div class="categories__item--photo">
+                        <img src="./assets/images/categories/1.jpg" alt="category" />
+                    </div>
+                    <div class="categories__item--title">Оборудование</div>
+                </a>
+                <a href="#" class="categories__item">
+                    <div class="categories__item--photo">
+                        <img src="./assets/images/categories/2.jpg" alt="category" />
+                    </div>
+                    <div class="categories__item--title">Косметика</div>
+                </a>
+                <a href="#" class="categories__item">
+                    <div class="categories__item--photo">
+                        <img src="./assets/images/categories/3.jpg" alt="category" />
+                    </div>
+                    <div class="categories__item--title">Парфюмерия</div>
+                </a>
+            </div>
+        </section>
+
+        <section class="popular">
+            <h2>Популярные товары</h2>
+
+            <div class="popular-wrapper">
+                <a href="#" class="popular__item">
+                    <div class="popular__item--photo">
+                        <img src="./assets/images/pop/1.jpg" alt="popular item" />
+                    </div>
+                    <span class="add-to-wishlist"></span>
+                    <div class="popular__item--topline">
+                        <div class="item-name">LE&nbsp;LABO Ambrette</div>
+                        <div class="item-price">21&nbsp;455&nbsp;₽</div>
+                    </div>
+                    <div class="popular__item--specs">
+                        <div class="item-desc">Парфюмерная вода</div>
+                        <div class="item-volume">100мл</div>
+                    </div>
+                    <div class="popular__item--btns">
+                        <button class=" btn-dark one-click-buy">Купить в&nbsp;один клик</button>
+                        <button class=" btn-dark add-to-cart"></button>
+                    </div>
+                </a>
+
+                <a href="#" class="popular__item">
+                    <div class="popular__item--photo">
+                        <img src="./assets/images/pop/2.jpg" alt="popular item" />
+                    </div>
+                    <span class="add-to-wishlist"></span>
+                    <div class="popular__item--topline">
+                        <div class="item-name">INSIGHT PROFESSIONAL</div>
+                        <div class="item-price">1&nbsp;324&nbsp;₽</div>
+                    </div>
+                    <div class="popular__item--specs">
+                        <div class="item-desc">Кондиционер для&nbsp;волос</div>
+                        <div class="item-volume">400мл</div>
+                    </div>
+                    <div class="popular__item--btns">
+                        <button class=" btn-dark one-click-buy">Купить в&nbsp;один клик</button>
+                        <button class=" btn-dark add-to-cart"></button>
+                    </div>
+                </a>
+
+                <a href="#" class="popular__item">
+                    <div class="popular__item--photo">
+                        <img src="./assets/images/pop/3.jpg" alt="popular item" />
+                    </div>
+                    <span class="add-to-wishlist"></span>
+                    <div class="popular__item--topline">
+                        <div class="item-name">ALFAPARF MILANO&nbsp;sdl</div>
+                        <div class="item-price">1&nbsp;819&nbsp;₽</div>
+                    </div>
+                    <div class="popular__item--specs">
+                        <div class="item-desc">Маска для&nbsp;сухих волос</div>
+                        <div class="item-volume">200мл</div>
+                    </div>
+                    <div class="popular__item--btns">
+                        <button class=" btn-dark one-click-buy">Купить в&nbsp;один клик</button>
+                        <button class=" btn-dark add-to-cart"></button>
+                    </div>
+                </a>
+
+                <a href="#" class="popular__item">
+                    <div class="popular__item--photo">
+                        <img src="./assets/images/pop/3.jpg" alt="popular item" />
+                    </div>
+                    <span class="add-to-wishlist"></span>
+                    <div class="popular__item--topline">
+                        <div class="item-name">ALFAPARF MILANO&nbsp;sdl</div>
+                        <div class="item-price">1&nbsp;819&nbsp;₽</div>
+                    </div>
+                    <div class="popular__item--specs">
+                        <div class="item-desc">Маска для&nbsp;сухих волос</div>
+                        <div class="item-volume">200мл</div>
+                    </div>
+                    <div class="popular__item--btns">
+                        <button class=" btn-dark one-click-buy">Купить в&nbsp;один клик</button>
+                        <button class=" btn-dark add-to-cart"></button>
+                    </div>
+                </a>
+
+                <a href="#" class="popular__item">
+                    <div class="popular__item--photo">
+                        <img src="./assets/images/pop/3.jpg" alt="popular item" />
+                    </div>
+                    <span class="add-to-wishlist"></span>
+                    <div class="popular__item--topline">
+                        <div class="item-name">ALFAPARF MILANO&nbsp;sdl</div>
+                        <div class="item-price">1&nbsp;819&nbsp;₽</div>
+                    </div>
+                    <div class="popular__item--specs">
+                        <div class="item-desc">Маска для&nbsp;сухих волос</div>
+                        <div class="item-volume">200мл</div>
+                    </div>
+                    <div class="popular__item--btns">
+                        <button class=" btn-dark one-click-buy">Купить в&nbsp;один клик</button>
+                        <button class=" btn-dark add-to-cart"></button>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__grid">
+            <div class="footer__logo"></div>
+            <nav class="footer__menu">
+                <p class="footer__heading">интернет-магазин</p>
+                <ul>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">О&nbsp;компании</a></li>
+                    <li><a href="#">Каталог</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="footer__contacts">
+                <p class="footer__heading">контакты</p>
+                <a href="tel:88001234556">+7(800)123-45-56</a>
+                <p>г.&nbsp;Москва, Варшавское шоссе, д.125</p>
+            </div>
+            <div class="footer__warning">
+                Прием заказов в&nbsp;интернет-магазине 24&nbsp;часа!
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>&copy;&nbsp;2022 Тестовая работа. Все права защищены</p>
+        </div>
+    </footer>
+
+    <script src="./assets/jquery-3.6.0.min.js"></script>
+    <script src="./assets/slick-1.8.1/slick/slick.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

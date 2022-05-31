@@ -1,0 +1,246 @@
+.header {
+    @include padding-wrapper;
+    width: 100%;
+    background: url(/local/templates/caprice/assets/images/main-bg.jpg) no-repeat center center;
+    background-size: cover;
+    color: $color-white;
+
+    &__top {
+        width: 100%;
+        margin: 0 auto;
+        padding: 15px 0;
+        @include flex-center;
+        flex-wrap: wrap;
+        align-items: center;
+
+        @include breakpoint(sm) {
+            width: 380px;
+            align-items: flex-start;
+        }
+
+        @include breakpoint(md) {
+            @include flex-between;
+            width: 100%;
+            height: 99px;
+        }
+
+        > .btn-light {
+            white-space: nowrap;
+        }
+
+        &__icons {
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+            margin-left: 20px;
+            @include breakpoint(sm) {
+                margin-left: 0;
+            }
+
+            > .icon {
+                display: block;
+                cursor: pointer;
+                width: 24px;
+                height: 24px;
+                user-select: none;
+                &:not(:last-child) {
+                    margin-right: 28px;
+                }
+            }
+
+            > .search {
+                position: relative;
+                background: url(/local/templates/caprice/assets/images/search.svg) no-repeat center center;
+            }
+
+            > .auth {
+                background: url(/local/templates/caprice/assets/images/user.svg) no-repeat center center;
+            }
+
+            > .wish {
+                background: url(/local/templates/caprice/assets/images/heart-light.svg) no-repeat center center;
+            }
+        }
+
+        .search__panel {
+            position: absolute;
+            z-index: 5000;
+            top: 40px;
+            width: 300px;
+            height: 70px;
+            background-color: rgba(255, 255, 255, .5);
+            display: flex;
+            overflow: hidden;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 8px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+            padding: 10px;
+            display: none;
+
+            // &.active {
+            //     display: block;
+            // }
+
+            #title-search-input {
+                background-color: $color-white;
+                height: 50px;
+                border-radius: 5px;
+                padding: 0 10px;
+                margin-right: 8px;
+                display: inline-block;
+            }
+
+            > .btn {
+                background-color: $color-dark;
+                color: $color-white;
+                padding: 5px 10px;
+                height: 50px;
+                border-radius: 5px;
+                display: inline-block;
+                &:hover {
+                    color: $color-purple;
+                }
+            }
+        }
+    }
+
+    &__logo {
+        @include logo;
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-bottom: 20px;
+        @include breakpoint(sm) {
+            margin-top: -10px;
+        }
+        @include breakpoint(md) {
+            margin: 0;
+        }
+    }
+
+    &__menu {
+        position: relative;
+
+        &:before, &:after {
+            position: absolute;
+            content: '';
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: $color-light;
+            opacity: .3;
+        }
+
+        &:before {
+            top: 0;
+        }
+
+        &:after {
+            bottom: 0;
+        }
+
+        &__mobile {
+            @include flex-center;
+            @include breakpoint(sm) {
+                display: none;
+            }
+
+            > span {
+                user-select: none;
+                @include link;
+                line-height: 100%;
+                letter-spacing: 0.02em;
+                text-transform: uppercase;
+                color: $color-white;
+                padding: 24px 0;
+                display: block;
+            }
+
+            .mobile_panel {
+                position: fixed;
+                top: 0;
+                right: 0;
+                margin-right: -100%;
+                transition: all .3s ease-in-out;
+                width: 100%;
+                height: 100vh;
+                overflow: hidden;
+                background-color: $color-purple;
+                padding: 20px;
+                z-index: 9999;
+
+                &--close {
+                    font-size: 35px;
+                    color: $color-light;
+                    position: absolute;
+                    right: 20px;
+                    top: 20px;
+                }
+
+                a {
+                    @include link;
+                    line-height: 100%;
+                    letter-spacing: 0.02em;
+                    text-transform: uppercase;
+                    color: $color-white;
+                    padding: 24px 0;
+                    display: block;
+                }
+
+                &.opened {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        > ul {
+            display: none;
+            width: 100%;
+            @include breakpoint(sm) {
+                @include flex-center;
+                flex-wrap: nowrap;
+            }
+
+            > li {
+                &:not(:last-of-type) {
+                    margin-right: 40px;
+                }
+
+                > a {
+                    @include link;
+                    line-height: 100%;
+                    letter-spacing: 0.02em;
+                    text-transform: uppercase;
+                    color: $color-white;
+                    padding: 24px 0;
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &__hero {
+        padding: 80px 0;
+        display: none;
+        > h1 {
+            margin-bottom: 36px;
+        }
+        > p {
+            max-width: 568px;
+        }
+
+        @include breakpoint(md) {
+            padding: 140px 0;
+        }
+    }
+}
+
+body.homepage .header {
+    @include breakpoint(sm) {
+        height: 900px;
+    }
+
+    &__hero {
+        display: block;
+    }
+}

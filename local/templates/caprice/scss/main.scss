@@ -1,0 +1,13 @@
+@import '../assets/fonts/fonts.css';
+
+@import './variables';
+@import './mixins';
+@import './media';
+
+@import './base';
+
+@import './components/header';
+@import './components/section__advantages';
+@import './components/categories';
+@import './components/popular';
+@import './components/footer';

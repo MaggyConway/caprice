@@ -1,0 +1,141 @@
+@mixin heading {
+    font-family: 'Calypso';
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+@mixin h1 {
+    @include heading;
+    font-size: 36px;
+    line-height: 120%;
+    @include breakpoint(sm) {
+        font-size: 55px;
+    }
+    @include breakpoint(md) {
+        font-size: 78px;
+    }
+}
+
+@mixin h2 {
+    @include heading;
+    font-size: 28px;
+    line-height: 140%;
+    margin-bottom: 35px;
+    text-align: center;
+    @include breakpoint(sm) {
+        font-size: 40px;
+    }
+    @include breakpoint(md) {
+        font-size: 48px;
+        margin-bottom: 60px;
+        text-align: left;
+    }
+}
+
+@mixin text-primary {
+    font-size: 18px;
+    line-height: 140%;
+    font-weight: 400;
+}
+
+@mixin text-accent {
+    @include text-primary;
+    font-weight: 600;
+}
+
+@mixin caption {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 130%;
+}
+
+@mixin link {
+    font-size: 16px;
+    line-height: 140%;
+    font-weight: 400;
+    &:hover {
+        color: $color-purple;
+    }
+}
+
+@mixin btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    padding: 5px 10px;
+    height: 48px;
+    border: 1px solid;
+    @include breakpoint(sm) {
+        padding: 16px 24px;
+    }
+}
+
+@mixin btn-title {
+    @include link;
+    font-weight: 500;
+}
+
+@mixin btn-dark {
+    @include link;
+    @include btn;
+    color: $color-dark;
+    border-color: $color-dark;
+    background-color: transparent;
+    &:hover {
+        color: $color-white;
+        background-color: $color-dark;
+    }
+}
+
+@mixin btn-light {
+    @include btn-title;
+    @include btn;
+    color: $color-white;
+    border-color: $color-white;
+    &:hover {
+        color: $color-dark;
+        background-color: $color-white;
+    }
+}
+
+@mixin padding-wrapper {
+    padding: 0 20px;
+    @include breakpoint(sm) {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    @include breakpoint(dx) {
+        padding: 0 calc((100% - 1200px) / 2);
+    }
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin logo {
+    width: 157px;
+    height: 63px;
+    display: block;
+    background: url(/local/templates/caprice/assets/images/logo.svg) no-repeat center center;
+    user-select: none;
+}
+
+@mixin grid-item {
+    width: calc(100% / 3);
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+}

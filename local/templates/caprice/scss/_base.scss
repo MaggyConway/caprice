@@ -1,0 +1,53 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: $color-dark;
+    @include text-primary;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+h1 {
+    @include h1;
+}
+
+h2 {
+    @include h2;
+}
+
+ul, ol {
+    list-style-type: none;
+}
+
+a {
+    transition: all .3s ease-in-out;
+    text-decoration: none !important;
+    color: $color-dark;
+    &:hover {
+        color: $color-purple;
+    }
+}
+
+.btn-dark {
+    @include btn-dark;
+}
+
+.btn-light {
+    @include btn-light;
+}
+
+section {
+    @include padding-wrapper;
+    margin-bottom: 50px;
+    @include breakpoint(sm) {
+        margin-bottom: 100px;
+    }
+    @include breakpoint(md) {
+        margin-bottom: 180px;
+    }
+}

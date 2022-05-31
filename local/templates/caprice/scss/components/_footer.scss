@@ -1,0 +1,103 @@
+.footer {
+    background-color: $color-dark;
+    color: $color-white;
+    @include padding-wrapper;
+    padding-top: 50px;
+    @include breakpoint(md) {
+        padding-top: 100px;
+    }
+
+    &__grid {
+        // display: grid;
+        // grid-template-columns: repeat(4, 1fr);
+        // grid-template-rows: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+
+        @include breakpoint(lg) {
+            flex-wrap: nowrap;
+        }
+
+        > * {
+            width: 100%;
+            margin-bottom: 30px;
+            @include breakpoint(sm) {
+                width: 50%;
+                margin-bottom: 0;
+            }
+            @include breakpoint(lg) {
+                max-width: 190px;
+                width: auto;
+                // margin-right: 0;
+            }
+        }
+    }
+
+    &__logo {
+        @include logo;
+        background-position: left center;
+        width: 100%;
+        @include breakpoint(sm) {
+            width: 50%;
+        }
+        @include breakpoint(lg) {
+            width: 157px;
+            background-position: center center;
+        }
+    }
+
+    &__menu {
+        margin-bottom: 30px;
+        @include breakpoint(lg) {
+            margin-bottom: 0;
+        }
+        > ul {
+            > li {
+                > a {
+                    @include link;
+                    color: $color-white;
+                    margin-bottom: 8px;
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &__contacts {
+        a {
+            @include link;
+            color: $color-white;
+            margin-bottom: 8px;
+            display: block;
+        }
+    }
+
+    &__heading {
+        @include link;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        color: $color-white;
+        opacity: .5;
+        pointer-events: none;
+        margin-bottom: 20px;
+    }
+
+    &__warning {
+        font-weight: 600;
+        @include breakpoint(lg) {
+            max-width: 242px;
+        }
+    }
+
+    &__bottom {
+        margin-top: 50px;
+        padding-bottom: 10px;
+        @include caption;
+        opacity: .3;
+        @include breakpoint(md) {
+            margin-top: 100px;
+        }
+    }
+}
